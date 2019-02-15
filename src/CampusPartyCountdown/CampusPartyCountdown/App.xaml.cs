@@ -20,10 +20,10 @@ namespace CampusPartyCountdown
         protected override void OnStart()
         {
             base.OnStart();
+	
+        	AppCenter.Start("87e5ce5b-ca29-454d-9535-067725a96785",
+                typeof(Analytics), typeof(Crashes));
 
-            AppCenter.Start("android={Your Android App secret here};" +
-                            "ios={Your iOS App secret here}",
-                            typeof(Analytics), typeof(Crashes));
         }
     }
 }
